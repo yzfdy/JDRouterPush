@@ -82,7 +82,7 @@ def routerActivityInfo(mac):
     if res.status_code == 200:
         res_json = res.json()
         result = res_json["result"]
-        finishActivity = result["finishActivity"]
+        # finishActivity = result["finishActivity"]
         if result["routerUnderwayResult"] is None:
             exit
         else:
@@ -364,7 +364,7 @@ def main():
     if GlobalVariable.RECORDSNUM.isdigit():
         GlobalVariable.records_num = int(GlobalVariable.RECORDSNUM)
     resolveDeviceName(GlobalVariable.DEVICENAME)
-    checkForUpdates()
+    # checkForUpdates()
     todayPointIncome()
     pinTotalAvailPoint()
     todayPointDetail()
